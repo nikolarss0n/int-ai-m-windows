@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>$(NeutralTargetFramework)</TargetFramework>
+    <RootNamespace>InterviewMaster.Presentation</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="InterviewMaster.UiDriver" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InterviewMaster.Core\InterviewMaster.Core.csproj" />
+  </ItemGroup>
+</Project>

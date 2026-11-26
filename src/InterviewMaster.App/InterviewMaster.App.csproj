@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>$(WindowsTargetFramework)</TargetFramework>
+    <RootNamespace>InterviewMaster.App</RootNamespace>
+    <AssemblyName>InterviewMaster</AssemblyName>
+    <ApplicationIcon>Assets\InterviewMaster.ico</ApplicationIcon>
+    <Version>1.0.0</Version>
+    <Product>Interview Master</Product>
+    <AssemblyTitle>Interview Master</AssemblyTitle>
+    <Copyright>© 2024 Nikolay Prosenikov</Copyright>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InterviewMaster.Core\InterviewMaster.Core.csproj" />
+    <ProjectReference Include="..\InterviewMaster.UI\InterviewMaster.UI.csproj" />
+    <ProjectReference Include="..\InterviewMaster.Windows\InterviewMaster.Windows.csproj" />
+  </ItemGroup>
+  <!-- The Skia and HarfBuzz packages ship 100 MB of debug symbols that the app never reads. -->
+  <Target Name="DropNativeSymbols" AfterTargets="ComputeResolvedFilesToPublishList">
+    <ItemGroup>
+      <ResolvedFileToPublish Remove="@(ResolvedFileToPublish)" Condition="'%(Extension)' == '.pdb'" />
+    </ItemGroup>
+  </Target>
+</Project>

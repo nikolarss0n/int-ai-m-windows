@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>$(NeutralTargetFramework)</TargetFramework>
+    <RootNamespace>InterviewMaster</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="InterviewMaster.Core.Tests" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\Resources\practice\*.json" Link="Resources\practice\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\..\Resources\qa_database.json" Link="Resources\qa_database.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

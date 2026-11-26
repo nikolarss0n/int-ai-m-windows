@@ -1,0 +1,5 @@
+*.cs text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+# Copied byte for byte from the macOS repo.
+Resources/** -text

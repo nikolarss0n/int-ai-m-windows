@@ -1,0 +1,27 @@
+# Copy this file to %USERPROFILE%\.interview-master-keys and fill in values (PowerShell):
+#
+#   Copy-Item interview-master-keys.example "$env:USERPROFILE\.interview-master-keys"
+#   notepad "$env:USERPROFILE\.interview-master-keys"
+#
+# Never commit the filled-in file. Environment variables with the same
+# names override these values when the app starts.
+
+# Required: Groq Whisper transcription + fast classify/answer path
+# https://console.groq.com/keys
+GROQ_API_KEY=
+
+# Preferred: xAI Grok for interview answers and screenshot analysis
+# https://console.x.ai
+XAI_API_KEY=
+
+# Optional fallback if XAI_API_KEY is unset
+# https://platform.claude.com/settings/keys
+# ANTHROPIC_API_KEY=
+
+# Optional: only when a GPT answer model is selected in the model menu
+# https://platform.openai.com/api-keys
+# OPENAI_API_KEY=
+
+# Optional: experimental Jev question classification (also needs IM_JEV_ENABLED=1)
+# https://docs.typesafe.ai/api
+# TYPESAFE_API_KEY=

@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>12.0</LangVersion>
+    <NeutralTargetFramework>net8.0</NeutralTargetFramework>
+    <WindowsTargetFramework>net8.0-windows</WindowsTargetFramework>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <AvaloniaVersion>12.2.0</AvaloniaVersion>
+    <!-- Avalonia 12.2 analyzers need a newer compiler than SDK 8.0.4xx ships. The UI is built in code, so they are not needed. -->
+    <NoWarn>$(NoWarn);CS9057</NoWarn>
+  </PropertyGroup>
+</Project>
